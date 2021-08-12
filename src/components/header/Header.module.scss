@@ -1,0 +1,35 @@
+.app-head{
+  .app-head-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    .nav-left {
+      display: flex;
+      align-items: center;
+      .nav-left-title {
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .app-head-center {
+    display: flex;
+    width: 80%;
+    margin: 15px auto 10px auto;
+    .title {
+      margin-right: 10px;
+      color: #84c5e1;
+    }
+    .search {
+      width: 300px;
+    }
+  }
+  .main-menu {
+    background-color: #0b67d6;
+    color: #ffffff;
+  }
+}
