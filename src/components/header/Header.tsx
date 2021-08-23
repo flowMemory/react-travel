@@ -1,8 +1,15 @@
 import styles from "./Header.module.scss";
 import { GlobalOutlined } from "@ant-design/icons";
 import { Typography, Dropdown, Menu, Button, Input } from 'antd';
+import { useHistory, Link } from 'react-router-dom';
 const { Title } = Typography;
 export const Header: React.FC = () => {
+
+  // 使用hooks的方式处理路由
+  // const location = useLocation();
+  // const params = useParams();
+  // const match = useRouteMatch();
+  const history = useHistory()
   return (
     <div className={styles['app-head']}>
       <div className={styles['app-head-top']}>
@@ -22,13 +29,15 @@ export const Header: React.FC = () => {
         </div>
         <div className={styles['nav-right']}>
           <Button.Group className={styles["button-group"]}>
-            <Button>注册</Button>
-            <Button>登陆</Button>
+            <Button onClick={() => {history.push('/registe')}}>注册</Button>
+            <Button><Link to="/signIn">登陆</Link></Button>
           </Button.Group>
         </div>
       </div>
       <div className={styles['app-head-center']}>
-        <Title className={styles.title} level={5}>React旅游网</Title>
+        <Title className={styles.title} level={5}>
+          <Link to="/">React旅游网</Link>
+        </Title>
         <Input.Search className={styles.search} placeholder={"请输入旅游目的地、主题、或关键字"}></Input.Search>
       </div>
       <Menu mode={"horizontal"} className={styles["main-menu"]}>
