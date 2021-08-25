@@ -4,6 +4,7 @@ import './style/reset.css';
 import 'antd/dist/antd.css';
 import './index.css';
 import App from './App';
+import "./i18n/configs"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

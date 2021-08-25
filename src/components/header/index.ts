@@ -1,1 +1,1 @@
-export * from './Header.class.react-redux';
+export * from './Header';

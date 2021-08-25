@@ -1,3 +1,4 @@
+import i18n from "i18next";
 import * as actionTypes from './languageType';
 import { LanguageActionTypes } from './languageActionCreator';
 export interface LanguageState {
@@ -21,6 +22,7 @@ const reducer = (state = defaultState, action: LanguageActionTypes) => {
     };
   }
   if(action.type === actionTypes.CHANGE_LANGUAGE_TYPE) {
+    i18n.changeLanguage(action.state); // 这样处理是不标准的，有副作用
     return { ...state, language: action.state };
   }
   return state;
